@@ -2,6 +2,11 @@ sidebar:
     homepage: "Home"
     archive: "Archives"
     article_num: "Number of articles"
+    about: "About Me" 
+    gallery: "Gallery"
+    links: "Links"
+    tags: "Tags" #this object name is mentioned above
+    timeline: "TimeLine"
 post:
     visitor: "Visitors"
     views: "Views"

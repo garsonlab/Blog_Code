@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Garson's Zone
 subtitle:
-description:
-author: John Doe
-language:
+description: A Personal TineLine About My Work And Life.
+author: Garson
+language: zh-CN
 timezone:
 
 # URL
@@ -74,7 +74,15 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: material
 
+# Serch local 
+## Plugins: https://github.com/PaicHyperionDev/hexo-generator-search
+search:
+  path: search.xml
+  field: post
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/garsonlab/garsonlab.github.io.git
+  branch: master

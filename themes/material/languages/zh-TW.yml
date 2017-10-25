@@ -2,6 +2,11 @@ sidebar:
     homepage: "首頁"
     archive: "過往"
     article_num: "文章總數"
+    about: "關於我" 
+    gallery: "圖庫"
+    links: "友情鏈接"
+    tags: "標簽雲" #this object name is mentioned above
+    timeline: "時間軸"
 post:
     visitor: "訪客"
     views: "瀏覽量"

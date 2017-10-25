@@ -38,7 +38,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace:
@@ -79,6 +79,13 @@ theme: material
 search:
   path: search.xml
   field: post
+
+# Hight
+## Pligins: https://github.com/ele828/hexo-prism-plugin
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'default'
+  line_number: true    # default false
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

@@ -28,7 +28,8 @@
             <% for (var i in theme.sidebar.pages) { %>
                 <a class="index_share-link" href="<%= theme.sidebar.pages[i].link || '#' %>" title="<%= i %>">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
-                        <%= i %>
+                        <!-- <%= i %> -->
+                        <%= __('sidebar.' + i) %>
                     </li>
                 </a>
             <% } %>

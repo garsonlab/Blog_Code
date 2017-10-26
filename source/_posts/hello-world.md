@@ -1,38 +1,8 @@
 ---
 title: Hello World
+date: 2016-6-4
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
-
-### Create a new post
-
-``` bash
-$ hexo new "My New Post"
-```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/deployment.html)
+从来没有写过博文，虽然从几年前就开始计划写自己的东西，或者起码把自己遇到的问题记录下来，然后某天自己可以再看看...于是，我把所有的问题归结为：懒！
+五年前（好吧一看时间感觉很久了——满满沧桑感。。。），2011年进入大学开始接触程序，无论哪种语言第一行必须是： "Hello World !" ，我认为这祸害了我，不管第一次做出来什么东西都有想说一句helloworld的冲动。偶然间听到、看到其他人说关于类似事情的时候，我也会想，等以后退休了练习书法，第一个写出来的是不是也会是Hello World，这是愚、悲还是专呢。。。
+一年零一个月前，参加完研究生复试通过，但还是一狠心一咬牙给放弃了，一个人拖着皮箱背着书包来到了这里，紧张、不安、彷徨、迷茫、害怕、无助充满了心中。。。好吧不堪回首，最主要的是发现自己词穷了，一年的程序经历，发现自己不会说话了，留给自己有感而发时再写吧

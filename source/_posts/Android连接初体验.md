@@ -1,5 +1,5 @@
 ---
-title: 简单Transparent shader的三种实现
+title: Android连接问题
 date: 2016-12-5
 tags:
 - Android

@@ -37,7 +37,7 @@
     
     <title>
         
-            基础光照——漫反射与高光反射 | 
+            一键排版对齐 | 
         
         年华之上
     </title>
@@ -49,7 +49,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Garson">
     <meta name="description" itemprop="description" content="年华路上，识己、予人">
-    <meta name="keywords" content=",Unity,Shader">
+    <meta name="keywords" content=",UGUI,对齐">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -261,18 +261,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="基础光照——漫反射与高光反射 | 年华之上">
+    <meta property="og:title" content="一键排版对齐 | 年华之上">
     <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
     <meta property="og:description" content="年华路上，识己、予人">
-    <meta property="og:article:tag" content="Unity"> <meta property="og:article:tag" content="Shader"> 
+    <meta property="og:article:tag" content="UGUI"> <meta property="og:article:tag" content="对齐"> 
 
     
-        <meta property="article:published_time" content="Fri Sep 23 2016 00:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Thu Oct 26 2017 17:34:23 GMT+0800" />
+        <meta property="article:published_time" content="Tue May 23 2017 00:00:00 GMT+0800" />
+        <meta property="article:modified_time" content="Thu Oct 26 2017 19:22:25 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="基础光照——漫反射与高光反射 | 年华之上">
+    <meta name="twitter:title" content="一键排版对齐 | 年华之上">
     <meta name="twitter:description" content="年华路上，识己、予人">
     <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -280,7 +280,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2016/09/23/unity-shader-light/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/05/23/一键排版对齐/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -292,10 +292,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2016/09/23/unity-shader-light/index.html",
-    "headline": "基础光照——漫反射与高光反射",
-    "datePublished": "Fri Sep 23 2016 00:00:00 GMT+0800",
-    "dateModified": "Thu Oct 26 2017 17:34:23 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2017/05/23/一键排版对齐/index.html",
+    "headline": "一键排版对齐",
+    "datePublished": "Tue May 23 2017 00:00:00 GMT+0800",
+    "dateModified": "Thu Oct 26 2017 19:22:25 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Garson",
@@ -313,7 +313,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",Unity,Shader",
+    "keywords": ",UGUI,对齐",
     "description": "年华路上，识己、予人",
 }
 </script>
@@ -374,15 +374,6 @@
     <!-- Left aligned menu below button -->
     
     
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#矩阵"><span class="post-toc-number">1.</span> <span class="post-toc-text">矩阵</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#漫反射光照模型"><span class="post-toc-number">2.</span> <span class="post-toc-text">漫反射光照模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#高光反射光照模型"><span class="post-toc-number">3.</span> <span class="post-toc-text">高光反射光照模型</span></a></li></ol>
-    </ul>
-    
 
 
 
@@ -412,7 +403,7 @@
         
     
             <p class="article-headline-p">
-                基础光照——漫反射与高光反射
+                一键排版对齐
             </p>
         </div>
 
@@ -431,7 +422,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Garson</strong>
-        <span>9月 23, 2016</span>
+        <span>5月 23, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -455,7 +446,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Shader/">Shader</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Unity/">Unity</a>
+        <a class="post_tag-link" href="/tags/UGUI/">UGUI</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/对齐/">对齐</a>
     </ul>
     
 
@@ -472,7 +463,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=基础光照——漫反射与高光反射&url=http://yoursite.com/2016/09/23/unity-shader-light/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=一键排版对齐&url=http://yoursite.com/2017/05/23/一键排版对齐/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -481,7 +472,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=基础光照——漫反射与高光反射&url=http://yoursite.com/2016/09/23/unity-shader-light/index.html&via=Garson" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=一键排版对齐&url=http://yoursite.com/2017/05/23/一键排版对齐/index.html&via=Garson" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -490,7 +481,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/09/23/unity-shader-light/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/05/23/一键排版对齐/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -499,7 +490,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2016/09/23/unity-shader-light/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/05/23/一键排版对齐/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -524,160 +515,151 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><p>继续学习《Unity Shader 入门精要》。渲染的流程前部分是坐标变换，变换顺序是：<br>模型空间（Model Space）–&gt;世界空间（World Space）–&gt;观察空间（View Space）–&gt;裁剪空间–&gt;屏幕空间<br>具体的矩阵变换可以方便的使用内置矩阵：</p>
-<pre><code>UNITY_MATRIX_MVP        当前模型视图投影矩阵
-UNITY_MATRIX_MV           当前模型视图矩阵
-UNITY_MATRIX_V              当前视图矩阵。
-UNITY_MATRIX_P              目前的投影矩阵
-UNITY_MATRIX_VP            当前视图*投影矩阵
-UNITY_MATRIX_T_MV       移调模型视图矩阵
-UNITY_MATRIX_IT_MV      模型视图矩阵的逆转
-UNITY_MATRIX_TEXTURE0   UNITY_MATRIX_TEXTURE3          纹理变换矩阵
-</code></pre><p>记住变换顺序很有必要，并且，如果两个矩阵要做 mul 运算的时候，必须在同一坐标空间下。</p>
-<h3 id="漫反射光照模型"><a href="#漫反射光照模型" class="headerlink" title="漫反射光照模型"></a>漫反射光照模型</h3><pre class="line-numbers language-cpp"><code class="language-cpp">
-<span class="token comment" spellcheck="true">// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'</span>
+        <p>好久没有写东西了，因为最近忙，做一些项目上具体的功能。由于偶尔还是要拼一下UI，感觉对齐还是一个问题。虽然在以前写过一个<a href="https://garsonlab.github.io/2017/02/27/%E4%B8%80%E9%94%AE%E5%AF%B9%E9%BD%90%E7%88%B6%E8%8A%82%E7%82%B9/" target="_blank" rel="external">一键对齐父节点</a>的东西，可还是不够用，Unity中没有其他工具一样的辅助线。。。so,如果要让两个UI项以某种方式对齐排列，自己手动摆毛事总有那么一点点误差，除非你改坐标。我的功能是这样的：<br><img src="http://img.blog.csdn.net/20170523162739024?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2hlbmc2MjQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="我的csdn"></p>
+<p><img src="http://img.blog.csdn.net/20170523162818399?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2hlbmc2MjQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="我的csdn"></p>
+<p>支持  <strong>缩放、锚点、中心点</strong> 不同，全部一键搞定。</p>
+<pre class="line-numbers language-csharp"><code class="language-csharp">
+<span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">;</span>
+<span class="token keyword">using</span> System<span class="token punctuation">.</span>Collections<span class="token punctuation">.</span>Generic<span class="token punctuation">;</span>
+<span class="token keyword">using</span> UnityEditor<span class="token punctuation">;</span>
+<span class="token keyword">using</span> UnityEngine<span class="token punctuation">;</span>
 
-Shader <span class="token string">"Mine/6_DiffuseVertexLevel"</span> <span class="token punctuation">{</span>
-    Properties <span class="token punctuation">{</span>
-        <span class="token function">_Diffuse</span> <span class="token punctuation">(</span><span class="token string">"Diffuse"</span><span class="token punctuation">,</span> Color<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">/// &lt;summary></span>
+<span class="token comment" spellcheck="true">/// Introduction: GUIAlignOthers</span>
+<span class="token comment" spellcheck="true">/// Author:     Cheng</span>
+<span class="token comment" spellcheck="true">/// Time: </span>
+<span class="token comment" spellcheck="true">/// &lt;/summary></span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GUIAlignOthers</span> <span class="token punctuation">:</span>Editor
+<span class="token punctuation">{</span>
+
+    <span class="token punctuation">[</span><span class="token function">MenuItem</span><span class="token punctuation">(</span><span class="token string">"GameObject/UI/Align/Top"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">AlignTop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">Align</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    SubShader <span class="token punctuation">{</span>
-        Pass <span class="token punctuation">{</span>
-            Tags <span class="token punctuation">{</span> <span class="token string">"LightMode"</span><span class="token operator">=</span><span class="token string">"ForwardBase"</span> <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">//只有定义了正确的 LightMode 才能得到要用的 _LightColor0 ...</span>
+    <span class="token punctuation">[</span><span class="token function">MenuItem</span><span class="token punctuation">(</span><span class="token string">"GameObject/UI/Align/Left"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">AlignLeft</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">Align</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">[</span><span class="token function">MenuItem</span><span class="token punctuation">(</span><span class="token string">"GameObject/UI/Align/Right"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">AlignRight</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">Align</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">[</span><span class="token function">MenuItem</span><span class="token punctuation">(</span><span class="token string">"GameObject/UI/Align/Bottom"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">AlignBottom</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">Align</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">[</span><span class="token function">MenuItem</span><span class="token punctuation">(</span><span class="token string">"GameObject/UI/Align/Horizontal"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">AlignHorizontal</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">Align</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">[</span><span class="token function">MenuItem</span><span class="token punctuation">(</span><span class="token string">"GameObject/UI/Align/Vertical"</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">AlignVertical</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">Align</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-            CGPROGRAM
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">Align</span><span class="token punctuation">(</span><span class="token keyword">int</span> type<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        List<span class="token operator">&lt;</span>RectTransform<span class="token operator">></span> rects <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">List</span><span class="token operator">&lt;</span>RectTransform<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        GameObject<span class="token punctuation">[</span><span class="token punctuation">]</span> objects <span class="token operator">=</span> Selection<span class="token punctuation">.</span>gameObjects<span class="token punctuation">;</span>
+        <span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token keyword">var</span> obj <span class="token keyword">in</span> objects<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            RectTransform rect <span class="token operator">=</span> obj<span class="token punctuation">.</span><span class="token generic-method function">GetComponent<span class="token punctuation">&lt;</span>RectTransform<span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>rect <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+                rects<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>rect<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-            <span class="token macro property">#<span class="token directive keyword">pragma</span> vertex vert</span>
-            <span class="token macro property">#<span class="token directive keyword">pragma</span> fragment frag</span>
-
-            <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"Lighting.cginc"</span> </span><span class="token comment" spellcheck="true">//得到要使用的 _LightColor0 等内置变量</span>
-
-            fixed4 _Diffuse<span class="token punctuation">;</span>
-
-            <span class="token keyword">struct</span> a2v <span class="token punctuation">{</span>
-                float4 vertex <span class="token operator">:</span> POSITION<span class="token punctuation">;</span>
-                float3 normal <span class="token operator">:</span> NORMAL<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-            <span class="token keyword">struct</span> v2f <span class="token punctuation">{</span>
-                float4 pos <span class="token operator">:</span> SV_POSITION<span class="token punctuation">;</span>
-                fixed3 color <span class="token operator">:</span> COLOR<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// or TEXCOORD0</span>
-            <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-            v2f <span class="token function">vert</span><span class="token punctuation">(</span>a2v v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                v2f o<span class="token punctuation">;</span>
-                o<span class="token punctuation">.</span>pos <span class="token operator">=</span> <span class="token function">mul</span><span class="token punctuation">(</span>UNITY_MATRIX_MVP<span class="token punctuation">,</span> v<span class="token punctuation">.</span>vertex<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// must ,get projection space</span>
-
-                fixed3 ambient <span class="token operator">=</span> UNITY_LIGHTMODEL_AMBIENT<span class="token punctuation">.</span>xyz<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//get ambient</span>
-                <span class="token comment" spellcheck="true">// 把法线从模型空间转换到世界空间，用的右乘当逆矩阵</span>
-                fixed3 worldNormal <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span><span class="token function">mul</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span>normal<span class="token punctuation">,</span> <span class="token punctuation">(</span>float3x3<span class="token punctuation">)</span>unity_WorldToObject<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                fixed3 worldLight <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span>_WorldSpaceLightPos0<span class="token punctuation">.</span>xyz <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//只适用于平行光</span>
-                <span class="token comment" spellcheck="true">//漫反射 ＝ 入射光 ＊ 漫反射系数 ＊ max（0，dot（法线，光源方向））</span>
-                fixed3 diffuse <span class="token operator">=</span> _LightColor0<span class="token punctuation">.</span>rgb <span class="token operator">*</span> _Diffuse<span class="token punctuation">.</span>rgb <span class="token operator">*</span> <span class="token function">saturate</span><span class="token punctuation">(</span><span class="token function">dot</span><span class="token punctuation">(</span>worldNormal<span class="token punctuation">,</span> worldLight<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token comment" spellcheck="true">//如果是半lambert，则公式为</span>
-                <span class="token comment" spellcheck="true">//漫反射 ＝ 入射光 ＊ 漫反射系数 ＊ （缩放倍数＊dot（法线，光源方向） ＋ 偏移）</span>
-                <span class="token comment" spellcheck="true">//一般缩放倍数和便宜都取0.5</span>
-                <span class="token comment" spellcheck="true">//fixed3 diffuse = _LightColor0.rgb * _Diffuse.rgb * (0.5*dot(worldNormal,worldLight)+0.5);</span>
-
-                o<span class="token punctuation">.</span>color <span class="token operator">=</span> ambient <span class="token operator">+</span> diffuse<span class="token punctuation">;</span>
-                <span class="token keyword">return</span> o<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-
-            fixed4 <span class="token function">frag</span><span class="token punctuation">(</span>v2f i<span class="token punctuation">)</span> <span class="token operator">:</span> SV_Target <span class="token punctuation">{</span>
-                <span class="token keyword">return</span> <span class="token punctuation">(</span>i<span class="token punctuation">.</span>color<span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-
-            ENDCG            
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>rects<span class="token punctuation">.</span>Count <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">Align</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> rects<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-    Fallback <span class="token string">"Diffuse"</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>如果要改为逐像素光照，需要改变 struct v2f，</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">struct</span> v2f <span class="token punctuation">{</span>
-    float4 pos <span class="token operator">:</span> SV_POSITION<span class="token punctuation">;</span>
-    fixed3 worldNormal <span class="token operator">:</span> TEXCOORD0
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>剩下的工作就是把 vert函数中的部分挪到 frag函数中。<br>另，代码中的半Lambert光照模型是为了解决在实际中，普通漫反射在光照不到的情况下是暗黑色的问题。</p>
-<h3 id="高光反射光照模型"><a href="#高光反射光照模型" class="headerlink" title="高光反射光照模型"></a>高光反射光照模型</h3><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'</span>
-<span class="token comment" spellcheck="true">// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'</span>
 
-Shader <span class="token string">"Custom/6_SpecularVertexLevel"</span> <span class="token punctuation">{</span>
-    Properties <span class="token punctuation">{</span>
-        <span class="token function">_Diffuse</span> <span class="token punctuation">(</span><span class="token string">"Diffuse"</span><span class="token punctuation">,</span> Color<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span>
-        <span class="token function">_Specular</span> <span class="token punctuation">(</span><span class="token string">"Specular"</span><span class="token punctuation">,</span> Color<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span>
-        <span class="token function">_Gloss</span> <span class="token punctuation">(</span><span class="token string">"Gloss"</span><span class="token punctuation">,</span> <span class="token function">Range</span><span class="token punctuation">(</span><span class="token number">8.0</span><span class="token punctuation">,</span> <span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token number">20</span>
-    <span class="token punctuation">}</span>
-    SubShader <span class="token punctuation">{</span>
-        Pass <span class="token punctuation">{</span>
-            Tags <span class="token punctuation">{</span> <span class="token string">"LightMode"</span><span class="token operator">=</span><span class="token string">"ForwardBase"</span> <span class="token punctuation">}</span>
 
-            CGPROGRAM
 
-            <span class="token macro property">#<span class="token directive keyword">pragma</span> vertex vert</span>
-            <span class="token macro property">#<span class="token directive keyword">pragma</span> fragment frag</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">Align</span><span class="token punctuation">(</span><span class="token keyword">int</span> type<span class="token punctuation">,</span> List<span class="token operator">&lt;</span>RectTransform<span class="token operator">></span> rects<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        RectTransform tenplate <span class="token operator">=</span> rects<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">float</span> w <span class="token operator">=</span> tenplate<span class="token punctuation">.</span>sizeDelta<span class="token punctuation">.</span>x <span class="token operator">*</span> tenplate<span class="token punctuation">.</span>lossyScale<span class="token punctuation">.</span>x<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//消除缩放影响</span>
+        <span class="token keyword">float</span> h <span class="token operator">=</span> tenplate<span class="token punctuation">.</span>sizeDelta<span class="token punctuation">.</span>y <span class="token operator">*</span> tenplate<span class="token punctuation">.</span>localScale<span class="token punctuation">.</span>y<span class="token punctuation">;</span>
 
-            <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"Lighting.cginc"</span></span>
+        <span class="token keyword">float</span> x <span class="token operator">=</span> tenplate<span class="token punctuation">.</span>position<span class="token punctuation">.</span>x <span class="token operator">-</span> tenplate<span class="token punctuation">.</span>pivot<span class="token punctuation">.</span>x <span class="token operator">*</span> w<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//消除中心点并非pivot非（0.5，0.5）影响</span>
+        <span class="token keyword">float</span> y <span class="token operator">=</span> tenplate<span class="token punctuation">.</span>position<span class="token punctuation">.</span>y <span class="token operator">-</span> tenplate<span class="token punctuation">.</span>pivot<span class="token punctuation">.</span>y <span class="token operator">*</span> h<span class="token punctuation">;</span>
 
-            fixed4 _Diffuse<span class="token punctuation">;</span>
-            fixed4 _Specular<span class="token punctuation">;</span>
-            <span class="token keyword">float</span> _Gloss<span class="token punctuation">;</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>type<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">case</span> <span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>上对齐
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> rects<span class="token punctuation">.</span>Count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    RectTransform trans <span class="token operator">=</span> rects<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token keyword">float</span> th <span class="token operator">=</span> trans<span class="token punctuation">.</span>sizeDelta<span class="token punctuation">.</span>y <span class="token operator">*</span> trans<span class="token punctuation">.</span>localScale<span class="token punctuation">.</span>y<span class="token punctuation">;</span>
+                    Vector3 pos <span class="token operator">=</span> trans<span class="token punctuation">.</span>position<span class="token punctuation">;</span>
+                    pos<span class="token punctuation">.</span>y <span class="token operator">=</span> y <span class="token operator">+</span> h <span class="token operator">-</span> th <span class="token operator">+</span> trans<span class="token punctuation">.</span>pivot<span class="token punctuation">.</span>y <span class="token operator">*</span> th<span class="token punctuation">;</span>
+                    trans<span class="token punctuation">.</span>position <span class="token operator">=</span> pos<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
 
-            <span class="token keyword">struct</span> a2v <span class="token punctuation">{</span>
-                float4 vertex <span class="token operator">:</span> POSITION<span class="token punctuation">;</span>
-                float3 normal <span class="token operator">:</span> NORMAL<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-            <span class="token keyword">struct</span> v2f <span class="token punctuation">{</span>
-                float4 pos <span class="token operator">:</span> SV_POSITION<span class="token punctuation">;</span>
-                fixed color <span class="token operator">:</span> COLOR<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-            v2f <span class="token function">vert</span><span class="token punctuation">(</span>a2v v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                v2f o<span class="token punctuation">;</span>
-                o<span class="token punctuation">.</span>pos <span class="token operator">=</span> <span class="token function">mul</span><span class="token punctuation">(</span>UNITY_MATRIX_MVP<span class="token punctuation">,</span> v<span class="token punctuation">.</span>vertex<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                fixed3 ambient <span class="token operator">=</span> UNITY_LIGHTMODEL_AMBIENT<span class="token punctuation">.</span>xyz<span class="token punctuation">;</span>
-
-                fixed3 worldNormal <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span><span class="token function">mul</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span>normal<span class="token punctuation">,</span> <span class="token punctuation">(</span>float3x3<span class="token punctuation">)</span>unity_WorldToObject<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//用unity内置函数是： ＝ UnityObjectToWorldNormal(v.normal)</span>
-                fixed3 worldLightDir <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span>_WorldSpaceLightPos0<span class="token punctuation">.</span>xyz<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token comment" spellcheck="true">//漫反射 ＝ 入射光 ＊ 漫反射系数 ＊ max（0，dot（入射方向，法线））</span>
-                fixed3 diffuse <span class="token operator">=</span> _LightColor0<span class="token punctuation">.</span>rgb <span class="token operator">*</span> _Diffuse <span class="token operator">*</span> <span class="token function">max</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token function">dot</span><span class="token punctuation">(</span>worldNormal<span class="token punctuation">,</span> worldLightDir<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-                <span class="token comment" spellcheck="true">//reflect 计算反射方向,两个参数是 入射方向、法线，但是要求入射方向是光源指向入射点，故取反</span>
-                fixed3 reflectDir <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span><span class="token function">reflect</span><span class="token punctuation">(</span><span class="token operator">-</span>worldLightDir<span class="token punctuation">,</span> worldNormal<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token comment" spellcheck="true">//计算视觉方向首先是要求处于同一空间下，然后向量计算</span>
-                fixed3 viewDir <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span>_WorldSpaceCameraPos<span class="token punctuation">.</span>xyz <span class="token operator">-</span> <span class="token function">mul</span><span class="token punctuation">(</span>unity_ObjectToWorld<span class="token punctuation">,</span> v<span class="token punctuation">.</span>vertex<span class="token punctuation">)</span><span class="token punctuation">.</span>xyz<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token comment" spellcheck="true">//高光反射 ＝ 入射光 ＊ 高光系数 ＊ pow（max（0，反射方向 ＊ 视觉方向），光泽度）</span>
-                fixed3 specular <span class="token operator">=</span> _LightColor0<span class="token punctuation">.</span>rgb <span class="token operator">*</span> _Specular<span class="token punctuation">.</span>rgb <span class="token operator">*</span> <span class="token function">pow</span><span class="token punctuation">(</span><span class="token function">saturate</span><span class="token punctuation">(</span><span class="token function">dot</span><span class="token punctuation">(</span>reflectDir<span class="token punctuation">,</span> viewDir<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> _Gloss<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-                <span class="token comment" spellcheck="true">//如果是 BlinnPhong 则把反射方向换成 光线方向和视觉方向和</span>
-                <span class="token comment" spellcheck="true">//fixed3 halfDir = normalize(worldLightDir + viewDir);</span>
-                <span class="token comment" spellcheck="true">//fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0,dot(worldNormal,halfDir)), _Gloss);</span>
-
-                o<span class="token punctuation">.</span>color <span class="token operator">=</span> ambient <span class="token operator">+</span> diffuse <span class="token operator">+</span> specular<span class="token punctuation">;</span>
-                <span class="token keyword">return</span> o<span class="token punctuation">;</span>        
-            <span class="token punctuation">}</span>
-
-            fixed4 <span class="token function">frag</span><span class="token punctuation">(</span>v2f i<span class="token punctuation">)</span> <span class="token operator">:</span> SV_Target <span class="token punctuation">{</span>
-                <span class="token keyword">return</span> <span class="token punctuation">(</span>i<span class="token punctuation">.</span>color<span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-
-            ENDCG
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">2</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>左对齐
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> rects<span class="token punctuation">.</span>Count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    RectTransform trans <span class="token operator">=</span> rects<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token keyword">float</span> tw <span class="token operator">=</span> trans<span class="token punctuation">.</span>sizeDelta<span class="token punctuation">.</span>x <span class="token operator">*</span> trans<span class="token punctuation">.</span>lossyScale<span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+                    Vector3 pos <span class="token operator">=</span> trans<span class="token punctuation">.</span>position<span class="token punctuation">;</span>
+                    pos<span class="token punctuation">.</span>x <span class="token operator">=</span> x <span class="token operator">+</span> tw<span class="token operator">*</span>trans<span class="token punctuation">.</span>pivot<span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+                    trans<span class="token punctuation">.</span>position <span class="token operator">=</span> pos<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">3</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>右对齐
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> rects<span class="token punctuation">.</span>Count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    RectTransform trans <span class="token operator">=</span> rects<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token keyword">float</span> tw <span class="token operator">=</span> trans<span class="token punctuation">.</span>sizeDelta<span class="token punctuation">.</span>x <span class="token operator">*</span> trans<span class="token punctuation">.</span>lossyScale<span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+                    Vector3 pos <span class="token operator">=</span> trans<span class="token punctuation">.</span>position<span class="token punctuation">;</span>
+                    pos<span class="token punctuation">.</span>x <span class="token operator">=</span> x<span class="token operator">+</span> w <span class="token operator">-</span> tw <span class="token operator">+</span> tw <span class="token operator">*</span> trans<span class="token punctuation">.</span>pivot<span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+                    trans<span class="token punctuation">.</span>position <span class="token operator">=</span> pos<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">4</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>下对齐
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> rects<span class="token punctuation">.</span>Count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    RectTransform trans <span class="token operator">=</span> rects<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token keyword">float</span> th <span class="token operator">=</span> trans<span class="token punctuation">.</span>sizeDelta<span class="token punctuation">.</span>y <span class="token operator">*</span> trans<span class="token punctuation">.</span>localScale<span class="token punctuation">.</span>y<span class="token punctuation">;</span>
+                    Vector3 pos <span class="token operator">=</span> trans<span class="token punctuation">.</span>position<span class="token punctuation">;</span>
+                    pos<span class="token punctuation">.</span>y <span class="token operator">=</span> y <span class="token operator">+</span> th<span class="token operator">*</span>trans<span class="token punctuation">.</span>pivot<span class="token punctuation">.</span>y<span class="token punctuation">;</span>
+                    trans<span class="token punctuation">.</span>position <span class="token operator">=</span> pos<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">5</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>水平对齐
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> rects<span class="token punctuation">.</span>Count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    RectTransform trans <span class="token operator">=</span> rects<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token keyword">float</span> th <span class="token operator">=</span> trans<span class="token punctuation">.</span>sizeDelta<span class="token punctuation">.</span>y <span class="token operator">*</span> trans<span class="token punctuation">.</span>localScale<span class="token punctuation">.</span>y<span class="token punctuation">;</span>
+                    Vector3 pos <span class="token operator">=</span> trans<span class="token punctuation">.</span>position<span class="token punctuation">;</span>
+                    pos<span class="token punctuation">.</span>y <span class="token operator">=</span> y <span class="token operator">+</span> <span class="token number">0.5f</span> <span class="token operator">*</span> h <span class="token operator">-</span> <span class="token number">0.5f</span><span class="token operator">*</span>th <span class="token operator">+</span> th <span class="token operator">*</span> trans<span class="token punctuation">.</span>pivot<span class="token punctuation">.</span>y<span class="token punctuation">;</span>
+                    trans<span class="token punctuation">.</span>position <span class="token operator">=</span> pos<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">6</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>垂直对齐
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> rects<span class="token punctuation">.</span>Count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    RectTransform trans <span class="token operator">=</span> rects<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token keyword">float</span> tw <span class="token operator">=</span> trans<span class="token punctuation">.</span>sizeDelta<span class="token punctuation">.</span>x <span class="token operator">*</span> trans<span class="token punctuation">.</span>lossyScale<span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+                    Vector3 pos <span class="token operator">=</span> trans<span class="token punctuation">.</span>position<span class="token punctuation">;</span>
+                    pos<span class="token punctuation">.</span>x <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token number">0.5f</span> <span class="token operator">*</span> w <span class="token operator">-</span> <span class="token number">0.5f</span> <span class="token operator">*</span> tw <span class="token operator">+</span> tw <span class="token operator">*</span> trans<span class="token punctuation">.</span>pivot<span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+                    trans<span class="token punctuation">.</span>position <span class="token operator">=</span> pos<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-    Fallback <span class="token string">"Specular"</span>
+
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>如果改为逐像素光照需改动 struct v2f</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">struct</span> v2f <span class="token punctuation">{</span>
-    float4 pos <span class="token operator">:</span> SV_POSITION<span class="token punctuation">;</span>
-    fixed worldNormal<span class="token operator">:</span> TEXCOORD0<span class="token punctuation">;</span>
-    fixed worldPos<span class="token operator">:</span> TEXCOORD1<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>然后换上相应的即可。<br>代码中给出了用的最多的BlinnPhong模型，目前用的最多。</p>
-<p>逐顶点光照和逐像素的区别在于计算的相对少和多，得到效果肯定计算多的逐像素更加显得平滑。</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
         
     
@@ -698,7 +680,7 @@ Shader <span class="token string">"Custom/6_SpecularVertexLevel"</span> <span cl
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2016/09/23/a-simple-shader/" id="post_nav-newer" class="prev-content">
+        <a href="/2017/08/08/踩坑填坑——DropDown/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -712,7 +694,7 @@ Shader <span class="token string">"Custom/6_SpecularVertexLevel"</span> <span cl
 
     <!-- Next Nav -->
     
-        <a href="/2016/08/01/dirty-world-by-lua/" id="post_nav-older" class="next-content">
+        <a href="/2017/05/02/无限列表 ScrollView List/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

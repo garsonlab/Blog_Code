@@ -469,6 +469,6 @@ public class GDropDown : MonoBehaviour
 
 <font color="red">注意： 下拉子选项中， 命名 “text”的“Text”组件、命名 “image”的“Image”组件为该选项的可填充值，看代码一眼便知。命名“selected”的表示下拉列表打开时该选项选中的表现，与toggle相同，我只是乐意改成了button表示而已</font>
 
-Index 就是当前选中项,无限列表需要用到我以前文章中的一篇[【UGUI】无限列表 ScrollView List]()
+Index 就是当前选中项,无限列表需要用到我以前文章中的一篇[【UGUI】无限列表 ScrollView List](https://garsonlab.github.io/2017/05/02/%E6%97%A0%E9%99%90%E5%88%97%E8%A1%A8%20ScrollView%20List/)
 
 

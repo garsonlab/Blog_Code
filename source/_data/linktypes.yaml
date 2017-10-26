@@ -1,0 +1,10 @@
+Blog:
+  name: "关注的博客"
+Unity:
+  name: "Unity3D"
+Community:
+  name: "浏览的社区"
+Tools:
+  name: "工具"
+Site:
+  name: "收藏的网址"

@@ -1,4 +1,8 @@
 <style>
+    .md-titles {
+        height: 50px;
+    }
+
     .md-links {
         min-height: calc(100% - 120px - 5pc - 6em);
         text-align: center;
@@ -86,7 +90,30 @@
     }
 </style>
 
-<ul class="md-links">
+
+<% if (site.data.linktypes) { %>
+    <% for (var t in site.data.linktypes) { %>
+        <span class="md-titles"><%= site.data.linktypes[t].name %></span>
+        <ul class="md-links">
+            <% if (site.data.links) { %>
+                <% for (var i in site.data.links) { %>
+                    <% if (site.data.links[i].type === t) { %>
+                        <li class="md-links-item">
+                            <a href="<%= site.data.links[i].link %>" title="<%= i %>" target="_blank">
+                                <img src="<%= site.data.links[i].avatar %>" alt="<%= i %>" width="72px"/>
+                                <span class="md-links-title"><%= i %></span><br />
+                                <span><%= site.data.links[i].descr %></span>
+                            </a>
+                        </li>
+                    <% } %>
+                <% } %>
+            <% } %>
+        </ul>
+    <% } %>
+<% } %>
+
+
+<!-- <ul class="md-links">
     <% if (site.data.links) { %>
         <% for (var i in site.data.links) { %>
             <li class="md-links-item">
@@ -98,7 +125,7 @@
             </li>
         <% } %>
     <% } %>
-</ul>
+</ul> -->
 
 <script type="text/ls-javascript" id="page-links-script">
     var adjustFooter = function() {

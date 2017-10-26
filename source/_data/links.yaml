@@ -2,3 +2,29 @@ Baidu:
   link: https://baidu.com
   avatar: https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png
   descr: "百度"
+  type: Blog
+OnLineTools:
+  link: http://tool.lu/
+  avatar: http://qn11.tool.lu/201710/15/103320SbM84Ql4tETjg49a_28x28.png
+  descr: "在线工具"
+  type: Tools
+CMDMarkdown:
+  link: https://www.zybuluo.com/
+  avatar: https://www.zybuluo.com/static/img/logo.png
+  descr: "Markdown在线编辑"
+  type: Tools
+Hexo文档:
+  link: https://hexo.io/zh-cn/docs/
+  avatar: https://hexo.io/logo.svg
+  descr: "Hexo中文官方文档"
+  type: Community
+游戏蛮牛:
+  link: http://www.manew.com/forum.php
+  avatar: http://www.manew.com/template/manew2016/images/logo.png
+  descr: "unity交流社区"
+  type: Unity
+FairyGUI:
+  link: http://www.fairygui.com/
+  avatar: http://www.fairygui.com/images/20170728151207.png
+  descr: "FairyGUI官方网站"
+  type: Site

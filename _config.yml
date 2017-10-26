@@ -93,3 +93,8 @@ deploy:
   type: git
   repo: https://github.com/garsonlab/garsonlab.github.io.git
   branch: master
+
+valine:
+  enable: true
+  appId: rrFc9LAMWuTc64KpWHmoXqUg-gzGzoHsz
+  appKey: rBGH0SDVJjMy2R31ktC7FEUM

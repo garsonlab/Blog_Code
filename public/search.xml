@@ -3,6 +3,113 @@
   
     
     <entry>
+      <title><![CDATA[Hexo]]></title>
+      <url>/2017/10/20/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+      <content type="html"><![CDATA[<h3 id="原博客搬迁"><a href="#原博客搬迁" class="headerlink" title="原博客搬迁"></a>原博客搬迁</h3><p>原本一直使用<a href="http://blog.csdn.net/cheng624" target="_blank" rel="external">CSDN的博客</a>记录一些自己的东西，但是前段时间登录发现一直需要我真实身份验证，抱着支持国家政策的态度我屈服了… 但是最近，后来为什么又出来一个必须扫描公众号二维码关注再完成手机验证。只想说你推广也就算了为毛还要强制！表示不服！<br>为了专治“不服”，我决定使用万能Github自行搭建博客，考虑了 <a href="http://jekyll.com.cn/" target="_blank" rel="external">Jekyll</a>，看了比人的一堆分析以后最终选择了 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">Hexo</a>，由于我的web前端只停留在html+css阶段故表示不懂他们底下的大区别，但是使用了以后只觉得 hexo很麻烦… 因为jekyll是github自动生成pages，hexo需要自己genegrate+deploy，我不知道这是不是代表我每次上传都必须有nodejs的环境，也不知道jekyll是不是这样…</p>
+<p>最终，我还是选择了hexo，因为我看用到了 <a href="https://github.com/viosey/hexo-theme-material/" target="_blank" rel="external">Material</a> 的模板0.0</p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>安装步骤很简单，一路文档操作：<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">连接</a><br>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：</p>
+<pre><code>Node.js
+Git
+</code></pre><p>如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="使用Material主题"><a href="#使用Material主题" class="headerlink" title="使用Material主题"></a>使用Material主题</h3><h4 id="建立一个空的站点"><a href="#建立一个空的站点" class="headerlink" title="建立一个空的站点"></a>建立一个空的站点</h4><p>选择一个心仪的文件夹，在此次cmd</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ hexo init MyBlog <span class="token comment" spellcheck="true">#MyBlog是我要放置博客文件的文件夹</span>
+$ <span class="token function">cd</span> MyBlog
+$ <span class="token function">npm</span> <span class="token function">install</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>完成以后对应的目录</p>
+<pre><code>.
+├── _config.yml
+├── package.json
+├── scaffolds
+├── source
+|   ├── _drafts
+|   └── _posts
+└── themes
+</code></pre><p>安装完成，在themes文件夹中已存在一个模板，由于它不是我们需要的模板，so把里面的文件删除干净，然后在里面用git或者直接down一份<a href="https://github.com/viosey/hexo-theme-material/" target="_blank" rel="external">Material</a> 的代码。解压完成。</p>
+<h4 id="修改基本配置"><a href="#修改基本配置" class="headerlink" title="修改基本配置"></a>修改基本配置</h4><p>先修改主文件夹的 <em>_config.yml</em> 文件，具体含义<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">参考配置</a>， 主要的是修改</p>
+<pre><code>language: zh-CN
+</code></pre><p>把语言设置成中文</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># Extensions</span>
+<span class="token comment" spellcheck="true">## Plugins: https://hexo.io/plugins/</span>
+<span class="token comment" spellcheck="true">## Themes: https://hexo.io/themes/</span>
+theme: material
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>主题设置成material</p>
+<p>打开material文件夹<br>复制一份 <em>_config.template.yml</em> 命名成 <em>_config.yml</em><br>里面的具体参数修改参考<a href="https://material.viosey.com/docs/#/config_basic" target="_blank" rel="external">这里</a></p>
+<p>照做基本都能成</p>
+<h4 id="添加本地搜索"><a href="#添加本地搜索" class="headerlink" title="添加本地搜索"></a>添加本地搜索</h4><p>使用本地搜索需要安装 <a href="https://github.com/PaicHyperionDev/hexo-generator-search" target="_blank" rel="external">hexo-generator-search</a> 插件。<br>在修改的 <em>_config.yml</em> 中<br>把 search: use 的值为 google 改为 local 即可。<br>然后在原 <em>_config.yml</em> 中添加</p>
+<pre class="line-numbers language-bash"><code class="language-bash">search:
+    path: search.xml
+    field: all
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="添加标签云、照片墙、时间线"><a href="#添加标签云、照片墙、时间线" class="headerlink" title="添加标签云、照片墙、时间线"></a>添加标签云、照片墙、时间线</h4><p><a href="https://material.viosey.com/docs/#/pages" target="_blank" rel="external">参考这里</a></p>
+<p>唯一需要说的就是需要在修改的 <em>_config.yml</em> 中仿照about界面添加对应标签</p>
+<pre><code># Sidebar Customize
+sidebar:
+    pages:
+        tags: #make sure the value corresponds to another one in language file
+            link: &quot;/tags&quot;
+            icon: label
+            divider: false
+        gallery:
+            link: &quot;/gallery&quot;
+            icon: photo
+            divider: false
+        about:
+            link: &quot;/about&quot;
+            icon: person
+            divider: false
+        timeline:
+            link: &quot;/timeline&quot;
+            icon: timeline
+            divider: false
+        links:
+            link: &quot;/links&quot;
+            icon: link
+            divider: false
+</code></pre><p>修改多语言文件 <em>zh_CN.yaml</em><br>sidebar:<br>    homepage: “主页”<br>    archive: “归档”<br>    article_num: “文章总数”<br>    about: “关于我”<br>    gallery: “图库”<br>    links: “友情链接”<br>    tags: “标签云” #this object name is mentioned above<br>    timeline: “时间轴”</p>
+<h4 id="其他微调"><a href="#其他微调" class="headerlink" title="其他微调"></a>其他微调</h4><p>按照配置与自己心意随意更改，只要你喜欢，改代码也是可以的</p>
+<h3 id="遇坑"><a href="#遇坑" class="headerlink" title="遇坑"></a>遇坑</h3><h4 id="自定义Pages的多语言"><a href="#自定义Pages的多语言" class="headerlink" title="自定义Pages的多语言"></a>自定义Pages的多语言</h4><p>我们添加了添加标签云、照片墙、时间线，同时，在zh_CN.yaml中配置了对应的中文，但是就是不显示<br>可修改代码 <em>layout/_partial/sidebar-navigation.ejs</em> 中的这一段</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">if(theme.sidebar.pages[i].icon){</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons sidebar-material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>&lt;%= theme.sidebar.pages[i].icon %><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+&lt;%= i %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+&lt;% if(theme.sidebar.pages[i].divider === true) { %>
+
+
+把 &lt;%= i %> 替换成 &lt;%= __('sidebar.' + i) %>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>同理，主界面有一个分页导航也是如此。</p>
+<h4 id="同步到github时Error"><a href="#同步到github时Error" class="headerlink" title="同步到github时Error"></a>同步到github时Error</h4><p>同步到github后，随后收到github的邮件， 说 You are attempting to use a Jekyll theme, “material”, which is not supported by GitHub Pages.</p>
+<p>这是由于hexo的深坑必须得自己手动发布才有效。<br>安装 deployer 可解决</p>
+<p>具体方法是 <a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/deployment.html</a></p>
+<h4 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h4><p>1，关注主题的<a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" rel="external">Issue</a><br>2，博客<a href="https://liguanghe.github.io/2017/05/22/blogRebuilt/" target="_blank" rel="external">hexo 博客的神坑及本质原因</a><br>3，度娘<br>4，谷歌<br>5，自行分析</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 基础操作 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> github </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[踩坑填坑——DropDown]]></title>
       <url>/2017/08/08/%E8%B8%A9%E5%9D%91%E5%A1%AB%E5%9D%91%E2%80%94%E2%80%94DropDown/</url>
       <content type="html"><![CDATA[<p>在使用UGUI的 DropDown 时， Canvas 的 Render Mode 选择了 Screen Space–Camera， 此时遇到一个小bug， 当我把这个下拉组件放到屏幕中间附近时， 下拉列表显示是正常的。当我把组件整体移到边缘，突然出现下拉列表的 Content 的坐标 不合法，由于 ugui 的点击关闭处理是在 Canvas 的子节点最下方又生成一个 全屏的 遮罩 来保证实现 “点击关闭”，所以此时整个界面卡死……….翻遍源码断点我也没找到问题..</p>
@@ -4210,99 +4317,6 @@ APP_STL :<span class="token operator">=</span> stlport_static
     </entry>
     
     <entry>
-      <title><![CDATA[简单Transparent shader的三种实现]]></title>
-      <url>/2016/11/24/%E7%AE%80%E5%8D%95Transparent%20shader%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9E%E7%8E%B0/</url>
-      <content type="html"><![CDATA[<p>第一个SubShader:固定管线<br>第二个SubShader:unity shader<br>第三个SubShader:顶点片段</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp">
-Shader <span class="token string">"Custom/Transparent"</span> <span class="token punctuation">{</span>
-    Properties <span class="token punctuation">{</span>
-        <span class="token function">_Color</span> <span class="token punctuation">(</span><span class="token string">"Main Color"</span><span class="token punctuation">,</span> Color<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0.6</span><span class="token punctuation">)</span>
-        <span class="token function">_MainTex</span> <span class="token punctuation">(</span><span class="token string">"Base (RGB)"</span><span class="token punctuation">,</span> 2D<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">"white"</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    SubShader <span class="token punctuation">{</span>
-        Tags <span class="token punctuation">{</span> <span class="token string">"Queue"</span><span class="token operator">=</span><span class="token string">"Transparent"</span> <span class="token punctuation">}</span>
-        Pass<span class="token punctuation">{</span>
-            Blend SrcAlpha OneMinusSrcAlpha
-            Color<span class="token punctuation">[</span>_Color<span class="token punctuation">]</span>
-            SetTexture<span class="token punctuation">[</span>_MainTex<span class="token punctuation">]</span><span class="token punctuation">{</span>
-                combine previous <span class="token operator">*</span> texture
-            <span class="token punctuation">}</span>
-
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    SubShader <span class="token punctuation">{</span>
-        Tags <span class="token punctuation">{</span> <span class="token string">"Queue"</span><span class="token operator">=</span><span class="token string">"Transparent"</span> <span class="token punctuation">}</span>
-        CGPROGRAM
-        <span class="token macro property">#<span class="token directive keyword">pragma</span> surface surf Lambert alpha</span>
-
-        fixed4 _Color<span class="token punctuation">;</span>
-        sampler2D _MainTex<span class="token punctuation">;</span>
-
-        <span class="token keyword">struct</span> Input <span class="token punctuation">{</span>
-            float2 uv_MainTex<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">;</span>
-        <span class="token keyword">void</span> <span class="token function">surf</span> <span class="token punctuation">(</span>Input IN<span class="token punctuation">,</span> inout SurfaceOutput o<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            fixed4 c <span class="token operator">=</span> <span class="token function">tex2D</span><span class="token punctuation">(</span>_MainTex<span class="token punctuation">,</span> IN<span class="token punctuation">.</span>uv_MainTex<span class="token punctuation">)</span> <span class="token operator">*</span> _Color<span class="token punctuation">;</span>
-            o<span class="token punctuation">.</span>Albedo <span class="token operator">=</span> c<span class="token punctuation">.</span>rgb<span class="token punctuation">;</span>
-            o<span class="token punctuation">.</span>Alpha <span class="token operator">=</span> c<span class="token punctuation">.</span>a<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-        ENDCG
-    <span class="token punctuation">}</span>
-    SubShader <span class="token punctuation">{</span>
-        Tags <span class="token punctuation">{</span> <span class="token string">"Queue"</span><span class="token operator">=</span><span class="token string">"Transparent"</span> <span class="token punctuation">}</span>
-        Blend SrcAlpha OneMinusSrcAlpha
-        Pass<span class="token punctuation">{</span>
-            CGPROGRAM
-            <span class="token macro property">#<span class="token directive keyword">pragma</span> vertex vert</span>
-            <span class="token macro property">#<span class="token directive keyword">pragma</span> fragment frag</span>
-            <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"UnityCG.cginc"</span></span>
-
-            fixed4 _Color<span class="token punctuation">;</span>
-            sampler2D _MainTex<span class="token punctuation">;</span>
-
-            <span class="token keyword">struct</span> v2f<span class="token punctuation">{</span>
-                float4 vertex <span class="token operator">:</span> POSITION<span class="token punctuation">;</span>
-                float2 texcoord <span class="token operator">:</span> TEXCOORD0<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-            v2f <span class="token function">vert</span><span class="token punctuation">(</span>appdata_base v<span class="token punctuation">)</span><span class="token punctuation">{</span>
-                v2f o<span class="token punctuation">;</span>
-                  o<span class="token punctuation">.</span>vertex <span class="token operator">=</span> <span class="token function">mul</span><span class="token punctuation">(</span>UNITY_MATRIX_MVP<span class="token punctuation">,</span>v<span class="token punctuation">.</span>vertex<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                  o<span class="token punctuation">.</span>texcoord <span class="token operator">=</span> v<span class="token punctuation">.</span>texcoord<span class="token punctuation">;</span>
-                  <span class="token keyword">return</span> o<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-
-            fixed4 <span class="token function">frag</span><span class="token punctuation">(</span>v2f i<span class="token punctuation">)</span><span class="token operator">:</span>COLOR<span class="token punctuation">{</span>
-                <span class="token keyword">return</span> <span class="token function">tex2D</span><span class="token punctuation">(</span>_MainTex<span class="token punctuation">,</span> i<span class="token punctuation">.</span>texcoord<span class="token punctuation">)</span> <span class="token operator">*</span> _Color<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-
-            ENDCG
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    FallBack <span class="token string">"Transparent/Diffuse"</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      
-        <categories>
-            
-            <category> UnityShader </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Unity </tag>
-            
-            <tag> Shader </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Unity中画实线与虚线]]></title>
       <url>/2016/11/24/Unity%E4%B8%AD%E7%94%BB%E5%AE%9E%E7%BA%BF%E4%B8%8E%E8%99%9A%E7%BA%BF/</url>
       <content type="html"><![CDATA[<p>以前用过Vectrosity来画过线，但时间久了忘记怎么用了，也忘记能不能画虚线了。试了一下Unity的LineRenderer加上一个材质来画虚线，但是它是把我们的贴图给拉伸覆盖创建出来的mesh的，忘记保存我的实验效果了。。。可能改改Shader还可以用吧。针扎一番后决定自己用GL写，由于Unity中GL与真正的GL有差距，所以虚线费了点事。</p>
@@ -4523,6 +4537,99 @@ Shader <span class="token string">"Custom/Transparent"</span> <span class="token
     </entry>
     
     <entry>
+      <title><![CDATA[简单Transparent shader的三种实现]]></title>
+      <url>/2016/11/24/%E7%AE%80%E5%8D%95Transparent%20shader%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9E%E7%8E%B0/</url>
+      <content type="html"><![CDATA[<p>第一个SubShader:固定管线<br>第二个SubShader:unity shader<br>第三个SubShader:顶点片段</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp">
+Shader <span class="token string">"Custom/Transparent"</span> <span class="token punctuation">{</span>
+    Properties <span class="token punctuation">{</span>
+        <span class="token function">_Color</span> <span class="token punctuation">(</span><span class="token string">"Main Color"</span><span class="token punctuation">,</span> Color<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0.6</span><span class="token punctuation">)</span>
+        <span class="token function">_MainTex</span> <span class="token punctuation">(</span><span class="token string">"Base (RGB)"</span><span class="token punctuation">,</span> 2D<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">"white"</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    SubShader <span class="token punctuation">{</span>
+        Tags <span class="token punctuation">{</span> <span class="token string">"Queue"</span><span class="token operator">=</span><span class="token string">"Transparent"</span> <span class="token punctuation">}</span>
+        Pass<span class="token punctuation">{</span>
+            Blend SrcAlpha OneMinusSrcAlpha
+            Color<span class="token punctuation">[</span>_Color<span class="token punctuation">]</span>
+            SetTexture<span class="token punctuation">[</span>_MainTex<span class="token punctuation">]</span><span class="token punctuation">{</span>
+                combine previous <span class="token operator">*</span> texture
+            <span class="token punctuation">}</span>
+
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    SubShader <span class="token punctuation">{</span>
+        Tags <span class="token punctuation">{</span> <span class="token string">"Queue"</span><span class="token operator">=</span><span class="token string">"Transparent"</span> <span class="token punctuation">}</span>
+        CGPROGRAM
+        <span class="token macro property">#<span class="token directive keyword">pragma</span> surface surf Lambert alpha</span>
+
+        fixed4 _Color<span class="token punctuation">;</span>
+        sampler2D _MainTex<span class="token punctuation">;</span>
+
+        <span class="token keyword">struct</span> Input <span class="token punctuation">{</span>
+            float2 uv_MainTex<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">void</span> <span class="token function">surf</span> <span class="token punctuation">(</span>Input IN<span class="token punctuation">,</span> inout SurfaceOutput o<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            fixed4 c <span class="token operator">=</span> <span class="token function">tex2D</span><span class="token punctuation">(</span>_MainTex<span class="token punctuation">,</span> IN<span class="token punctuation">.</span>uv_MainTex<span class="token punctuation">)</span> <span class="token operator">*</span> _Color<span class="token punctuation">;</span>
+            o<span class="token punctuation">.</span>Albedo <span class="token operator">=</span> c<span class="token punctuation">.</span>rgb<span class="token punctuation">;</span>
+            o<span class="token punctuation">.</span>Alpha <span class="token operator">=</span> c<span class="token punctuation">.</span>a<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        ENDCG
+    <span class="token punctuation">}</span>
+    SubShader <span class="token punctuation">{</span>
+        Tags <span class="token punctuation">{</span> <span class="token string">"Queue"</span><span class="token operator">=</span><span class="token string">"Transparent"</span> <span class="token punctuation">}</span>
+        Blend SrcAlpha OneMinusSrcAlpha
+        Pass<span class="token punctuation">{</span>
+            CGPROGRAM
+            <span class="token macro property">#<span class="token directive keyword">pragma</span> vertex vert</span>
+            <span class="token macro property">#<span class="token directive keyword">pragma</span> fragment frag</span>
+            <span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"UnityCG.cginc"</span></span>
+
+            fixed4 _Color<span class="token punctuation">;</span>
+            sampler2D _MainTex<span class="token punctuation">;</span>
+
+            <span class="token keyword">struct</span> v2f<span class="token punctuation">{</span>
+                float4 vertex <span class="token operator">:</span> POSITION<span class="token punctuation">;</span>
+                float2 texcoord <span class="token operator">:</span> TEXCOORD0<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+            v2f <span class="token function">vert</span><span class="token punctuation">(</span>appdata_base v<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                v2f o<span class="token punctuation">;</span>
+                  o<span class="token punctuation">.</span>vertex <span class="token operator">=</span> <span class="token function">mul</span><span class="token punctuation">(</span>UNITY_MATRIX_MVP<span class="token punctuation">,</span>v<span class="token punctuation">.</span>vertex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  o<span class="token punctuation">.</span>texcoord <span class="token operator">=</span> v<span class="token punctuation">.</span>texcoord<span class="token punctuation">;</span>
+                  <span class="token keyword">return</span> o<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            fixed4 <span class="token function">frag</span><span class="token punctuation">(</span>v2f i<span class="token punctuation">)</span><span class="token operator">:</span>COLOR<span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token function">tex2D</span><span class="token punctuation">(</span>_MainTex<span class="token punctuation">,</span> i<span class="token punctuation">.</span>texcoord<span class="token punctuation">)</span> <span class="token operator">*</span> _Color<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+            ENDCG
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    FallBack <span class="token string">"Transparent/Diffuse"</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      
+        <categories>
+            
+            <category> UnityShader </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> Shader </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[SVN下载github上的文件]]></title>
       <url>/2016/11/07/SVN%E4%B8%8B%E8%BD%BDgithub%E4%B8%8A%E7%9A%84%E6%96%87%E4%BB%B6/</url>
       <content type="html"><![CDATA[<h2 id="选择所要下载的地址"><a href="#选择所要下载的地址" class="headerlink" title="选择所要下载的地址"></a>选择所要下载的地址</h2><p>如   <a href="https://github.com/*****/*******/tree/master/******" target="_blank" rel="external">https://github.com/*****/*******/tree/master/******</a></p>
@@ -4543,6 +4650,71 @@ Shader <span class="token string">"Custom/Transparent"</span> <span class="token
             <tag> git </tag>
             
             <tag> github </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[一个简单的着色器]]></title>
+      <url>/2016/09/23/a-simple-shader/</url>
+      <content type="html"><![CDATA[<p>一直在关注<a href="http://blog.csdn.net/candycat1992" target="_blank" rel="external">CandyCat的博客</a>，所以在第一时间买了她新出的《Unity Shader 入门精要》，看了好久才记得要做读书笔记…是不是可以换句话说书写的太精彩忘记了<br>目前为止，第6章快看完了，回顾第五章讲的基础，就是一个简单的定点片元着色器，代码及注释如下：</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp">Shader <span class="token string">"Mine/5_SimpleShader"</span>
+<span class="token punctuation">{</span>
+    Properties<span class="token punctuation">{</span>
+        <span class="token function">_Color</span> <span class="token punctuation">(</span><span class="token string">"Color Tint"</span><span class="token punctuation">,</span> Color<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    SubShader<span class="token punctuation">{</span>
+        Pass<span class="token punctuation">{</span>
+            CGPROGRAM
+                <span class="token macro property">#<span class="token directive keyword">pragma</span> vertex vert</span>
+                <span class="token macro property">#<span class="token directive keyword">pragma</span> fragment frag</span>
+
+                fixed4 _Color<span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//input</span>
+                <span class="token keyword">struct</span> a2v <span class="token punctuation">{</span>
+                    float4 vertex <span class="token operator">:</span> POSITION<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 用模型空间定点填充vertex</span>
+                    float4 normal <span class="token operator">:</span> NORMAL<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 用模型空间的法线填充</span>
+                    float4 texcoord <span class="token operator">:</span> TEXCOORD0<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 用第一套纹理填充</span>
+                <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+                <span class="token comment" spellcheck="true">//vertex output</span>
+                <span class="token keyword">struct</span> v2f <span class="token punctuation">{</span>
+                    float4 pos <span class="token operator">:</span> SV_POSITION<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 裁剪空间中的位置信息填充pos</span>
+                    fixed3 color <span class="token operator">:</span> COLOR0<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 储存颜色信息</span>
+                <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+                v2f <span class="token function">vert</span><span class="token punctuation">(</span>a2v v<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//SV_POSITION意思是输出的是裁剪空间坐标</span>
+                    v2f o<span class="token punctuation">;</span>
+                    o<span class="token punctuation">.</span>pos <span class="token operator">=</span> <span class="token function">mul</span><span class="token punctuation">(</span>UNITY_MATRIX_MVP<span class="token punctuation">,</span> v<span class="token punctuation">.</span>vertex<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//转换到裁剪空间,顶点着色器中必须包含一个 SV_POSITION,否则无法得到裁剪空间中的坐标</span>
+                    o<span class="token punctuation">.</span>color <span class="token operator">=</span> v<span class="token punctuation">.</span>normal <span class="token operator">*</span> <span class="token number">0.5</span> <span class="token operator">+</span> <span class="token function">fixed3</span><span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//normal 范围（－1，1），color范围则成了（0，1）</span>
+                    <span class="token keyword">return</span> o<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+
+                fixed4 <span class="token function">frag</span><span class="token punctuation">(</span>v2f i<span class="token punctuation">)</span> <span class="token operator">:</span> SV_Target <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//SV_Target 把输出的颜色储存到默认帧缓冲</span>
+                    <span class="token keyword">return</span> <span class="token function">fixed4</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span>color <span class="token operator">*</span> _Color<span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+
+            ENDCG
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>还有，以后记得自己实践并记录！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> UnityShader </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Unity </tag>
+            
+            <tag> Shader </tag>
             
         </tags>
         
@@ -4705,71 +4877,6 @@ Shader <span class="token string">"Custom/6_SpecularVertexLevel"</span> <span cl
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然后换上相应的即可。<br>代码中给出了用的最多的BlinnPhong模型，目前用的最多。</p>
 <p>逐顶点光照和逐像素的区别在于计算的相对少和多，得到效果肯定计算多的逐像素更加显得平滑。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> UnityShader </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Unity </tag>
-            
-            <tag> Shader </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[一个简单的着色器]]></title>
-      <url>/2016/09/23/a-simple-shader/</url>
-      <content type="html"><![CDATA[<p>一直在关注<a href="http://blog.csdn.net/candycat1992" target="_blank" rel="external">CandyCat的博客</a>，所以在第一时间买了她新出的《Unity Shader 入门精要》，看了好久才记得要做读书笔记…是不是可以换句话说书写的太精彩忘记了<br>目前为止，第6章快看完了，回顾第五章讲的基础，就是一个简单的定点片元着色器，代码及注释如下：</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp">Shader <span class="token string">"Mine/5_SimpleShader"</span>
-<span class="token punctuation">{</span>
-    Properties<span class="token punctuation">{</span>
-        <span class="token function">_Color</span> <span class="token punctuation">(</span><span class="token string">"Color Tint"</span><span class="token punctuation">,</span> Color<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-    SubShader<span class="token punctuation">{</span>
-        Pass<span class="token punctuation">{</span>
-            CGPROGRAM
-                <span class="token macro property">#<span class="token directive keyword">pragma</span> vertex vert</span>
-                <span class="token macro property">#<span class="token directive keyword">pragma</span> fragment frag</span>
-
-                fixed4 _Color<span class="token punctuation">;</span>
-                <span class="token comment" spellcheck="true">//input</span>
-                <span class="token keyword">struct</span> a2v <span class="token punctuation">{</span>
-                    float4 vertex <span class="token operator">:</span> POSITION<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 用模型空间定点填充vertex</span>
-                    float4 normal <span class="token operator">:</span> NORMAL<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 用模型空间的法线填充</span>
-                    float4 texcoord <span class="token operator">:</span> TEXCOORD0<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 用第一套纹理填充</span>
-                <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-                <span class="token comment" spellcheck="true">//vertex output</span>
-                <span class="token keyword">struct</span> v2f <span class="token punctuation">{</span>
-                    float4 pos <span class="token operator">:</span> SV_POSITION<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 裁剪空间中的位置信息填充pos</span>
-                    fixed3 color <span class="token operator">:</span> COLOR0<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 储存颜色信息</span>
-                <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-                v2f <span class="token function">vert</span><span class="token punctuation">(</span>a2v v<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//SV_POSITION意思是输出的是裁剪空间坐标</span>
-                    v2f o<span class="token punctuation">;</span>
-                    o<span class="token punctuation">.</span>pos <span class="token operator">=</span> <span class="token function">mul</span><span class="token punctuation">(</span>UNITY_MATRIX_MVP<span class="token punctuation">,</span> v<span class="token punctuation">.</span>vertex<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//转换到裁剪空间,顶点着色器中必须包含一个 SV_POSITION,否则无法得到裁剪空间中的坐标</span>
-                    o<span class="token punctuation">.</span>color <span class="token operator">=</span> v<span class="token punctuation">.</span>normal <span class="token operator">*</span> <span class="token number">0.5</span> <span class="token operator">+</span> <span class="token function">fixed3</span><span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//normal 范围（－1，1），color范围则成了（0，1）</span>
-                    <span class="token keyword">return</span> o<span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-
-                fixed4 <span class="token function">frag</span><span class="token punctuation">(</span>v2f i<span class="token punctuation">)</span> <span class="token operator">:</span> SV_Target <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//SV_Target 把输出的颜色储存到默认帧缓冲</span>
-                    <span class="token keyword">return</span> <span class="token function">fixed4</span><span class="token punctuation">(</span>i<span class="token punctuation">.</span>color <span class="token operator">*</span> _Color<span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-
-            ENDCG
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>还有，以后记得自己实践并记录！</p>
 ]]></content>
       
         <categories>

@@ -41,7 +41,7 @@
     
     <title>
         
-            关于主页君 | 
+            Hexo | 
         
         年华之上
     </title>
@@ -53,7 +53,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Garson">
     <meta name="description" itemprop="description" content="年华路上，识己、予人">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",git,github,hexo">
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
 
@@ -264,15 +264,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="关于主页君 | 年华之上">
+    <meta property="og:title" content="Hexo | 年华之上">
     <meta property="og:image" content="http://yoursite.com/img/favicon.png" />
     <meta property="og:description" content="年华路上，识己、予人">
-    
+    <meta property="og:article:tag" content="git"> <meta property="og:article:tag" content="github"> <meta property="og:article:tag" content="hexo"> 
 
+    
+        <meta property="article:published_time" content="Fri Oct 20 2017 00:00:00 GMT+0800" />
+        <meta property="article:modified_time" content="Fri Oct 27 2017 12:19:44 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="关于主页君 | 年华之上">
+    <meta name="twitter:title" content="Hexo | 年华之上">
     <meta name="twitter:description" content="年华路上，识己、予人">
     <meta name="twitter:image" content="http://yoursite.com/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -280,13 +283,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/about/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2017/10/20/Hexo搭建博客/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2017/10/20/Hexo搭建博客/index.html",
+    "headline": "Hexo",
+    "datePublished": "Fri Oct 20 2017 00:00:00 GMT+0800",
+    "dateModified": "Fri Oct 27 2017 12:19:44 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Garson",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "年华之上",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",git,github,hexo",
+    "description": "年华路上，识己、予人",
+}
+</script>
 
 
     
@@ -323,6 +356,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原博客搬迁"><span class="post-toc-number">1.</span> <span class="post-toc-text">原博客搬迁</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装hexo"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装hexo</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用Material主题"><span class="post-toc-number">3.</span> <span class="post-toc-text">使用Material主题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#建立一个空的站点"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">建立一个空的站点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#修改基本配置"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">修改基本配置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加本地搜索"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">添加本地搜索</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#添加标签云、照片墙、时间线"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">添加标签云、照片墙、时间线</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其他微调"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">其他微调</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#遇坑"><span class="post-toc-number">4.</span> <span class="post-toc-text">遇坑</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#自定义Pages的多语言"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">自定义Pages的多语言</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#同步到github时Error"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">同步到github时Error</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其他问题"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">其他问题</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -349,7 +415,7 @@
         
     
             <p class="article-headline-p">
-                关于主页君
+                Hexo
             </p>
         </div>
 
@@ -368,7 +434,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Garson</strong>
-        <span>10月 25, 2017</span>
+        <span>10月 20, 2017</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -385,6 +451,15 @@
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/git/">git</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/github/">github</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/hexo/">hexo</a>
+    </ul>
     
 
     <!-- Share -->
@@ -411,7 +486,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于主页君&url=http://yoursite.com/about/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hexo&url=http://yoursite.com/2017/10/20/Hexo搭建博客/index.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -420,7 +495,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=关于主页君&url=http://yoursite.com/about/index.html&via=Garson" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Hexo&url=http://yoursite.com/2017/10/20/Hexo搭建博客/index.html&via=Garson" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -429,7 +504,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/10/20/Hexo搭建博客/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -438,7 +513,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2017/10/20/Hexo搭建博客/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -463,10 +538,89 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="关于主页君"><a href="#关于主页君" class="headerlink" title="关于主页君"></a>关于主页君</h3><p>  主页君，名Garson，狮子座游戏程序猿<br>  宅，目测懒癌中期，尚有外出行动能力<br>  喜新不厌旧，尤其表现在对女朋友上<br>  爱探索，广涉略，!(~(not(大神)))<br>  尚自由，But一直被毛爷爷约束T_T</p>
-<h3 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h3><p>  <strong>BirthDay:</strong> 0x1301e00<br>  <strong>Email:</strong> jiacheng_liu@yeah.net<br>  <strong>QQ:</strong> 0x204ea5ad<br>  <strong>WeChat:</strong> cheng624</p>
-<h3 id="个人经验"><a href="#个人经验" class="headerlink" title="个人经验"></a>个人经验</h3><p>  暂不公布</p>
-<h3 id="经常使用"><a href="#经常使用" class="headerlink" title="经常使用"></a>经常使用</h3><p>  ！<a href="https://garsonlab.github.io/links/" target="_blank" rel="external">没事会看看的东西</a></p>
+        <h3 id="原博客搬迁"><a href="#原博客搬迁" class="headerlink" title="原博客搬迁"></a>原博客搬迁</h3><p>原本一直使用<a href="http://blog.csdn.net/cheng624" target="_blank" rel="external">CSDN的博客</a>记录一些自己的东西，但是前段时间登录发现一直需要我真实身份验证，抱着支持国家政策的态度我屈服了… 但是最近，后来为什么又出来一个必须扫描公众号二维码关注再完成手机验证。只想说你推广也就算了为毛还要强制！表示不服！<br>为了专治“不服”，我决定使用万能Github自行搭建博客，考虑了 <a href="http://jekyll.com.cn/" target="_blank" rel="external">Jekyll</a>，看了比人的一堆分析以后最终选择了 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">Hexo</a>，由于我的web前端只停留在html+css阶段故表示不懂他们底下的大区别，但是使用了以后只觉得 hexo很麻烦… 因为jekyll是github自动生成pages，hexo需要自己genegrate+deploy，我不知道这是不是代表我每次上传都必须有nodejs的环境，也不知道jekyll是不是这样…</p>
+<p>最终，我还是选择了hexo，因为我看用到了 <a href="https://github.com/viosey/hexo-theme-material/" target="_blank" rel="external">Material</a> 的模板0.0</p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>安装步骤很简单，一路文档操作：<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">连接</a><br>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：</p>
+<pre><code>Node.js
+Git
+</code></pre><p>如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="使用Material主题"><a href="#使用Material主题" class="headerlink" title="使用Material主题"></a>使用Material主题</h3><h4 id="建立一个空的站点"><a href="#建立一个空的站点" class="headerlink" title="建立一个空的站点"></a>建立一个空的站点</h4><p>选择一个心仪的文件夹，在此次cmd</p>
+<pre class="line-numbers language-bash"><code class="language-bash">$ hexo init MyBlog <span class="token comment" spellcheck="true">#MyBlog是我要放置博客文件的文件夹</span>
+$ <span class="token function">cd</span> MyBlog
+$ <span class="token function">npm</span> <span class="token function">install</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>完成以后对应的目录</p>
+<pre><code>.
+├── _config.yml
+├── package.json
+├── scaffolds
+├── source
+|   ├── _drafts
+|   └── _posts
+└── themes
+</code></pre><p>安装完成，在themes文件夹中已存在一个模板，由于它不是我们需要的模板，so把里面的文件删除干净，然后在里面用git或者直接down一份<a href="https://github.com/viosey/hexo-theme-material/" target="_blank" rel="external">Material</a> 的代码。解压完成。</p>
+<h4 id="修改基本配置"><a href="#修改基本配置" class="headerlink" title="修改基本配置"></a>修改基本配置</h4><p>先修改主文件夹的 <em>_config.yml</em> 文件，具体含义<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">参考配置</a>， 主要的是修改</p>
+<pre><code>language: zh-CN
+</code></pre><p>把语言设置成中文</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># Extensions</span>
+<span class="token comment" spellcheck="true">## Plugins: https://hexo.io/plugins/</span>
+<span class="token comment" spellcheck="true">## Themes: https://hexo.io/themes/</span>
+theme: material
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>主题设置成material</p>
+<p>打开material文件夹<br>复制一份 <em>_config.template.yml</em> 命名成 <em>_config.yml</em><br>里面的具体参数修改参考<a href="https://material.viosey.com/docs/#/config_basic" target="_blank" rel="external">这里</a></p>
+<p>照做基本都能成</p>
+<h4 id="添加本地搜索"><a href="#添加本地搜索" class="headerlink" title="添加本地搜索"></a>添加本地搜索</h4><p>使用本地搜索需要安装 <a href="https://github.com/PaicHyperionDev/hexo-generator-search" target="_blank" rel="external">hexo-generator-search</a> 插件。<br>在修改的 <em>_config.yml</em> 中<br>把 search: use 的值为 google 改为 local 即可。<br>然后在原 <em>_config.yml</em> 中添加</p>
+<pre class="line-numbers language-bash"><code class="language-bash">search:
+    path: search.xml
+    field: all
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="添加标签云、照片墙、时间线"><a href="#添加标签云、照片墙、时间线" class="headerlink" title="添加标签云、照片墙、时间线"></a>添加标签云、照片墙、时间线</h4><p><a href="https://material.viosey.com/docs/#/pages" target="_blank" rel="external">参考这里</a></p>
+<p>唯一需要说的就是需要在修改的 <em>_config.yml</em> 中仿照about界面添加对应标签</p>
+<pre><code># Sidebar Customize
+sidebar:
+    pages:
+        tags: #make sure the value corresponds to another one in language file
+            link: &quot;/tags&quot;
+            icon: label
+            divider: false
+        gallery:
+            link: &quot;/gallery&quot;
+            icon: photo
+            divider: false
+        about:
+            link: &quot;/about&quot;
+            icon: person
+            divider: false
+        timeline:
+            link: &quot;/timeline&quot;
+            icon: timeline
+            divider: false
+        links:
+            link: &quot;/links&quot;
+            icon: link
+            divider: false
+</code></pre><p>修改多语言文件 <em>zh_CN.yaml</em><br>sidebar:<br>    homepage: “主页”<br>    archive: “归档”<br>    article_num: “文章总数”<br>    about: “关于我”<br>    gallery: “图库”<br>    links: “友情链接”<br>    tags: “标签云” #this object name is mentioned above<br>    timeline: “时间轴”</p>
+<h4 id="其他微调"><a href="#其他微调" class="headerlink" title="其他微调"></a>其他微调</h4><p>按照配置与自己心意随意更改，只要你喜欢，改代码也是可以的</p>
+<h3 id="遇坑"><a href="#遇坑" class="headerlink" title="遇坑"></a>遇坑</h3><h4 id="自定义Pages的多语言"><a href="#自定义Pages的多语言" class="headerlink" title="自定义Pages的多语言"></a>自定义Pages的多语言</h4><p>我们添加了添加标签云、照片墙、时间线，同时，在zh_CN.yaml中配置了对应的中文，但是就是不显示<br>可修改代码 <em>layout/_partial/sidebar-navigation.ejs</em> 中的这一段</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">if(theme.sidebar.pages[i].icon){</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>material-icons sidebar-material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>&lt;%= theme.sidebar.pages[i].icon %><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">}</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+&lt;%= i %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+&lt;% if(theme.sidebar.pages[i].divider === true) { %>
+
+
+把 &lt;%= i %> 替换成 &lt;%= __('sidebar.' + i) %>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>同理，主界面有一个分页导航也是如此。</p>
+<h4 id="同步到github时Error"><a href="#同步到github时Error" class="headerlink" title="同步到github时Error"></a>同步到github时Error</h4><p>同步到github后，随后收到github的邮件， 说 You are attempting to use a Jekyll theme, “material”, which is not supported by GitHub Pages.</p>
+<p>这是由于hexo的深坑必须得自己手动发布才有效。<br>安装 deployer 可解决</p>
+<p>具体方法是 <a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/deployment.html</a></p>
+<h4 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h4><p>1，关注主题的<a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" rel="external">Issue</a><br>2，博客<a href="https://liguanghe.github.io/2017/05/22/blogRebuilt/" target="_blank" rel="external">hexo 博客的神坑及本质原因</a><br>3，度娘<br>4，谷歌<br>5，自行分析</p>
 
         
     
@@ -479,6 +633,21 @@
 
                 <!-- Post Comments -->
                 
+                    
+    <div id="comment" class="comment"></div>
+<script>
+    window.onload = function() {
+        new Valine({
+            av: AV, // source from av-min.js
+            el: '.comment',
+            app_id: "rrFc9LAMWuTc64KpWHmoXqUg-gzGzoHsz",
+            app_key: "rBGH0SDVJjMy2R31ktC7FEUM",
+            placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+        });
+    }
+</script>
+
+                
             </div>
 
             <!-- Post Prev & Next Nav -->
@@ -490,6 +659,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2017/08/08/踩坑填坑——DropDown/" id="post_nav-older" class="next-content">
+            下一篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -690,6 +867,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

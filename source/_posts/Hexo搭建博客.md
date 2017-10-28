@@ -1,5 +1,5 @@
 ---
-title: Hexo
+title: Hexo搭建博客
 date: 2017-10-20
 tags:
 - hexo

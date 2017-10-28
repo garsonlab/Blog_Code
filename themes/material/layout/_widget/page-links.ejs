@@ -1,9 +1,6 @@
 <style>
-    .md-titles {
-        height: 50px;
-    }
 
-    .md-links {
+    .md-links, .md-titles {
         min-height: calc(100% - 120px - 5pc - 6em);
         text-align: center;
         overflow: auto;
@@ -13,31 +10,31 @@
     }
 
     @media screen and (min-width: 680px) {
-        .md-links {
+        .md-links, .md-titles {
             max-width: 640px;
         }
     }
 
     @media screen and (min-width: 1000px) {
-        .md-links {
+        .md-links, .md-titles {
             max-width: 960px;
         }
     }
 
     @media screen and (min-width: 1320px) {
-        .md-links {
+        .md-links, .md-titles {
             max-width: 1280px;
         }
     }
 
     @media screen and (min-width: 1640px) {
-        .md-links {
+        .md-links, .md-titles {
             max-width: 1600px;
         }
     }
 
     @media screen and (max-width: 480px) {
-        .md-links {
+        .md-links, .md-titles {
             min-height: calc(100% - 200px - 5pc - 6em);
             margin-top: 6em;
         }
@@ -64,6 +61,10 @@
         list-style: none;
     }
 
+    .md-titles li {
+        float: left;
+        list-style: none;
+    }
     .md-links-item img {
         float: left;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 11px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
@@ -93,7 +94,8 @@
 
 <% if (site.data.linktypes) { %>
     <% for (var t in site.data.linktypes) { %>
-        <span class="md-titles"><%= site.data.linktypes[t].name %></span>
+        <ul class="md-titles"><li class="md-titles-item"><%= site.data.linktypes[t].name %></li></ul>
+        <!-- <span class="md-titles"><%= site.data.linktypes[t].name %></span> -->
         <ul class="md-links">
             <% if (site.data.links) { %>
                 <% for (var i in site.data.links) { %>

@@ -2,7 +2,25 @@ Github:
   link: https://github.com/garsonlab
   avatar: https://avatars3.githubusercontent.com/u/13958934?s=460&v=4
   descr: "My Github"
-  type: Blog
+  type: Mine
+Weibo:
+  link: https://github.com/garsonlab
+  avatar: https://avatars3.githubusercontent.com/u/13958934?s=460&v=4
+  descr: "新浪微博"
+  type: Mine
+CSDN:
+  link: http://blog.csdn.net/cheng624
+  avatar: https://avatars3.githubusercontent.com/u/13958934?s=460&v=4
+  descr: "我已被放弃的CSDNBlog"
+  type: Mine
+知乎:
+  link: https://www.zhihu.com/
+  avatar: https://static.zhihu.com/static/revved/img/index/logo.6837e927.png
+  descr: "知乎"
+  type: Mine
+
+
+
 OnLineTools:
   link: http://tool.lu/
   avatar: http://qn11.tool.lu/201710/15/103320SbM84Ql4tETjg49a_28x28.png

@@ -819,7 +819,7 @@ sidebar:
 <p>组件的点击由Toggle 来控制 与 系统UGUI的类似，支持 点击选中 图片和文字， 自己添加一个下拉列表。</p>
 <font color="red">注意： 下拉子选项中， 命名 “text”的“Text”组件、命名 “image”的“Image”组件为该选项的可填充值，看代码一眼便知。命名“selected”的表示下拉列表打开时该选项选中的表现，与toggle相同，我只是乐意改成了button表示而已</font>
 
-<p>Index 就是当前选中项,无限列表需要用到我以前文章中的一篇<a href="https://garsonlab.github.io/2017/05/02/%E6%97%A0%E9%99%90%E5%88%97%E8%A1%A8%20ScrollView%20List/" target="_blank" rel="external">【UGUI】无限列表 ScrollView List</a></p>
+<p>Index 就是当前选中项,无限列表需要用到我以前文章中的一篇<a href="https://garsonlab.github.io/2017/05/02/%E6%97%A0%E9%99%90%E5%88%97%E8%A1%A8%20ScrollView%20List/">【UGUI】无限列表 ScrollView List</a></p>
 ]]></content>
       
         <categories>
@@ -842,7 +842,7 @@ sidebar:
     <entry>
       <title><![CDATA[一键排版对齐]]></title>
       <url>/2017/05/23/%E4%B8%80%E9%94%AE%E6%8E%92%E7%89%88%E5%AF%B9%E9%BD%90/</url>
-      <content type="html"><![CDATA[<p>好久没有写东西了，因为最近忙，做一些项目上具体的功能。由于偶尔还是要拼一下UI，感觉对齐还是一个问题。虽然在以前写过一个<a href="https://garsonlab.github.io/2017/02/27/%E4%B8%80%E9%94%AE%E5%AF%B9%E9%BD%90%E7%88%B6%E8%8A%82%E7%82%B9/" target="_blank" rel="external">一键对齐父节点</a>的东西，可还是不够用，Unity中没有其他工具一样的辅助线。。。so,如果要让两个UI项以某种方式对齐排列，自己手动摆毛事总有那么一点点误差，除非你改坐标。我的功能是这样的：<br><img src="http://img.blog.csdn.net/20170523162739024?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2hlbmc2MjQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="我的csdn"></p>
+      <content type="html"><![CDATA[<p>好久没有写东西了，因为最近忙，做一些项目上具体的功能。由于偶尔还是要拼一下UI，感觉对齐还是一个问题。虽然在以前写过一个<a href="https://garsonlab.github.io/2017/02/27/%E4%B8%80%E9%94%AE%E5%AF%B9%E9%BD%90%E7%88%B6%E8%8A%82%E7%82%B9/">一键对齐父节点</a>的东西，可还是不够用，Unity中没有其他工具一样的辅助线。。。so,如果要让两个UI项以某种方式对齐排列，自己手动摆毛事总有那么一点点误差，除非你改坐标。我的功能是这样的：<br><img src="http://img.blog.csdn.net/20170523162739024?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2hlbmc2MjQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="我的csdn"></p>
 <p><img src="http://img.blog.csdn.net/20170523162818399?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvQ2hlbmc2MjQ=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="我的csdn"></p>
 <p>支持  <strong>缩放、锚点、中心点</strong> 不同，全部一键搞定。</p>
 <pre class="line-numbers language-csharp"><code class="language-csharp">
